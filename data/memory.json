@@ -30,21 +30,5 @@
     {
         "role": "assistant",
         "content": "Hello! How are you, Vishakha?"
-    },
-    {
-        "role": "user",
-        "content": "Using the standard formula \\(Max HR = 220 - age\\), what is the estimated maximum heart rate for a 35-year-old individual?"
-    },
-    {
-        "role": "assistant",
-        "content": "The estimated maximum heart rate for a 35-year-old individual is 185."
-    },
-    {
-        "role": "user",
-        "content": "According to the Karvonen formula, which of the following variables is NOT required to calculate the Target Heart Rate (THR)?"
-    },
-    {
-        "role": "assistant",
-        "content": "Age is 25 years old. Resting heart rate is 70 bpm. \n\nThe answer is Maximum heart rate and age are required to calculate the target heart rate using the Karvonen formula, along with the resting heart rate. Therefore, the variable that is NOT required to calculate the Target Heart Rate (THR) is none of the above, but since we have to choose one, the answer would be age, as the Karvonen formula itself only requires the resting heart rate and maximum heart rate, with age being used to estimate the maximum heart rate if it is not known."
     }
 ]
