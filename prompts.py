@@ -104,23 +104,6 @@ Give me the latitude and longitude for Eiffel Tower.
 TOOL 5
 
 Name:
-target_heart_rate_finder
-
-Purpose:
-Calculate a target heart rate or heart rate zone based on age and intensity.
-
-Examples
-
-User:
-What is my target heart rate at moderate intensity if I am 35?
-
-User:
-Calculate my heart rate zone for a 45 year old.
-
-=========================================================
-TOOL 6
-
-Name:
 unit_converter
 
 Purpose:
@@ -191,14 +174,6 @@ Geocoding
 {
     "tool":"geocoding_converter",
     "location":"Eiffel Tower"
-}
-
-Heart Rate
-
-{
-    "tool":"target_heart_rate_finder",
-    "age":35,
-    "intensity":"moderate"
 }
 
 Unit Conversion

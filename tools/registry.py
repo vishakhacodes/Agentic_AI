@@ -2,7 +2,6 @@ from .calculator import execute as calculator
 from .time_tool import execute as time
 from .weather import execute as weather
 from .geocoding_converter import execute as geocoding_converter
-from .target_heart_rate_finder import execute as target_heart_rate_finder
 from .unit_converter import execute as unit_converter
 from .compound_interest_calculator import execute as compound_interest_calculator
 
@@ -11,7 +10,6 @@ TOOLS = {
     "time": time,
     "weather": weather,
     "geocoding_converter": geocoding_converter,
-    "target_heart_rate_finder": target_heart_rate_finder,
     "unit_converter": unit_converter,
     "compound_interest_calculator": compound_interest_calculator,
 }
@@ -35,6 +33,5 @@ if __name__ == "__main__":
     print(execute_tool("time", {}))
     print(execute_tool("weather", {"city":"delhi"}))
     print(execute_tool("geocoding_converter", {"location":"Eiffel Tower"}))
-    print(execute_tool("target_heart_rate_finder", {"age":30, "intensity":"moderate"}))
     print(execute_tool("unit_converter", {"from_value":100, "from_unit":"km", "to_unit":"mi"}))
     print(execute_tool("compound_interest_calculator", {"principal":1000, "annual_rate":5, "times_per_year":12, "years":10}))

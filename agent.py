@@ -7,7 +7,6 @@ from tools import (
     time,
     weather,
     geocoding_converter,
-    target_heart_rate_finder,
     unit_converter,
     compound_interest_calculator,
 )
@@ -43,10 +42,6 @@ class Agent:
             "weather": lambda args: weather({"city": args.get("city", "")} ),
             "geocoding_converter": lambda args: geocoding_converter({
                 "location": args.get("location") or args.get("address") or args.get("query", "")
-            }),
-            "target_heart_rate_finder": lambda args: target_heart_rate_finder({
-                "age": args.get("age"),
-                "intensity": args.get("intensity"),
             }),
             "unit_converter": lambda args: unit_converter({
                 "from_value": args.get("from_value") or args.get("value"),
