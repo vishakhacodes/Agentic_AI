@@ -132,6 +132,40 @@ User:
 What will 1000 dollars grow to at 5% interest compounded monthly for 10 years?
 
 =========================================================
+TOOL 8
+
+Name:
+web_search
+
+Purpose:
+Search the web for recent information using a query.
+
+Examples
+
+User:
+Search for the latest AI news.
+
+User:
+Find information about Python 3.13.
+
+=========================================================
+TOOL 9
+
+Name:
+translation
+
+Purpose:
+Translate text from one language to another.
+
+Examples
+
+User:
+Translate 'Hello world' to Spanish.
+
+User:
+Translate this paragraph to Hindi.
+
+=========================================================
 OUTPUT FORMAT
 
 Whenever a tool is required,
@@ -193,6 +227,21 @@ Compound Interest
     "annual_rate":5,
     "times_per_year":12,
     "years":10
+}
+
+Web Search
+
+{
+    "tool":"web_search",
+    "query":"latest AI news"
+}
+
+Translation
+
+{
+    "tool":"translation",
+    "text":"Hello world",
+    "target_language":"es"
 }
 
 =========================================================

@@ -9,6 +9,8 @@ from tools import (
     geocoding_converter,
     unit_converter,
     compound_interest_calculator,
+    web_search,
+    translation,
 )
 
 
@@ -53,6 +55,14 @@ class Agent:
                 "annual_rate": args.get("annual_rate") or args.get("rate"),
                 "times_per_year": args.get("times_per_year"),
                 "years": args.get("years") or args.get("time"),
+            }),
+            "web_search": lambda args: web_search({
+                "query": args.get("query") or args.get("search") or args.get("text", "")
+            }),
+            "translation": lambda args: translation({
+                "text": args.get("text") or args.get("message") or args.get("content", ""),
+                "target_language": args.get("target_language") or args.get("to") or args.get("target"),
+                "source_language": args.get("source_language") or args.get("from_lang") or args.get("source"),
             }),
         }
 

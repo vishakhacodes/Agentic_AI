@@ -4,6 +4,8 @@ from .weather import execute as weather
 from .geocoding_converter import execute as geocoding_converter
 from .unit_converter import execute as unit_converter
 from .compound_interest_calculator import execute as compound_interest_calculator
+from .web_search import execute as web_search
+from .translation import execute as translation
 
 TOOLS = {
     "calculator": calculator,
@@ -12,6 +14,8 @@ TOOLS = {
     "geocoding_converter": geocoding_converter,
     "unit_converter": unit_converter,
     "compound_interest_calculator": compound_interest_calculator,
+    "web_search": web_search,
+    "translation": translation,
 }
 
 
