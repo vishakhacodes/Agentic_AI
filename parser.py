@@ -2,6 +2,9 @@ import json
 
 
 def parse_tool_call(response: str):
+    if not isinstance(response, str):
+        return None
+
     try:
         tool_request = json.loads(response)
 
@@ -13,6 +16,20 @@ def parse_tool_call(response: str):
 
     except Exception:
         pass
+
+    start = response.find("{")
+    end = response.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        candidate = response[start:end + 1]
+        try:
+            tool_request = json.loads(candidate)
+            if (
+                isinstance(tool_request, dict)
+                and "tool" in tool_request
+            ):
+                return tool_request
+        except Exception:
+            pass
 
     return None
 

@@ -14,6 +14,27 @@ from tools import (
 )
 
 
+def needs_live_search(query: str) -> bool:
+    if not query:
+        return False
+    query_lower = query.lower()
+    keywords = [
+        "latest",
+        "recent",
+        "new",
+        "upcoming",
+        "this year",
+        "today",
+        "now",
+        "current",
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+    ]
+    return any(keyword in query_lower for keyword in keywords)
+
+
 class Agent:
 
     def run(self, user_input: str) -> str:
@@ -28,6 +49,10 @@ class Agent:
 
         llm_response = chat(messages)
         tool_request = parse_tool_call(llm_response)
+
+        if tool_request is None and needs_live_search(user_input):
+            print("Live search heuristic triggered")
+            tool_request = {"tool": "web_search", "query": user_input}
 
         if tool_request is None:
             memory.append({"role": "user", "content": user_input})
